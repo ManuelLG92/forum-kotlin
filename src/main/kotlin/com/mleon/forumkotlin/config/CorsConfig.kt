@@ -12,7 +12,7 @@ class CorsConfig {
         return object : WebMvcConfigurer {
             override fun addCorsMappings(registry: CorsRegistry) {
                 registry.addMapping("/**")
-                    .allowedOrigins("http://localhost:3000")
+                    .allowedOrigins("http://localhost:3000", "https://next-forum-lake.vercel.app/")
                     .allowedMethods("*")
             }
         }
