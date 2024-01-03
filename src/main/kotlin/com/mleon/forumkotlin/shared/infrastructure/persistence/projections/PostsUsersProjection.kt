@@ -88,10 +88,10 @@ class PostsUsersProjection(private val userProjection: UsersProjection, private 
     }
 
     fun invalidateProjectionByUserId(id: UUID) {
+        this.userProjection.remove(id)
         this.postsProjection.values().forEach {
             if (it.created_by.compareTo(id) == 0) {
                 this.postsProjection.remove(id = it.id)
-                this.userProjection.remove(id)
             }
         }
     }

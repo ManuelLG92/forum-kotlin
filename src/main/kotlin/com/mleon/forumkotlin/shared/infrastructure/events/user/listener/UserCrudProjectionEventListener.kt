@@ -40,6 +40,7 @@ class UserCrudProjectionEventListener(
                 println("Handling UserEventDeleted")
                 val id = UuidGenerator.fromString(event.payload)
                 this.postsUsersProjection.invalidateProjectionByUserId(id = id)
+                this.usersProjection.remove(id = id)
                 println("Projection deleted")
             }
 
