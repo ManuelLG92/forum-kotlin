@@ -9,7 +9,7 @@ plugins {
     application
 }
 
-group = "om.mleon"
+group = "com.mleon.forumkotlin"
 version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_21
 
@@ -20,6 +20,7 @@ repositories {
 dependencies {
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
