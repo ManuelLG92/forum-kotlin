@@ -12,11 +12,13 @@ The backend service embodies CQRS principles by segregating data write operation
     - User updates trigger updates in corresponding projections.
     - User creation events generate associated projections.
     - Deletion of a user results in the removal of their data, including posts.
+    - Listing users with pagination.
 
 - **Post Operations:**
     - Posts initiate the creation of interconnected projections for each post and its creator.
     - Updates to posts reflect in the respective projections.
     - Post deletion removes the post from single-post projections and user-post projections.
+    - Listing posts with pagination.
 
 ## Architecture
 
